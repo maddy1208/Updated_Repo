@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
-    "migrate": "node -e \"require('fs').readFileSync('migrations/001_init.sql','utf8').split(';').forEach(q => q.trim() && require('./src/config/db').query(q))\"",
+    "migrate": "node src/config/migrate.js",
     "seed": "node seeds/seed.js",
     "test": "jest --runInBand"
   },
